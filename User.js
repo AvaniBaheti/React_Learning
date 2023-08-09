@@ -1,12 +1,13 @@
-function User(props)
-{
-    const name="Anil Sidhu"
-    return(
-        <div>
-            <h1>User Name is : </h1>
-            <button onClick={()=>props.getData(name)} >Click Me</button>
-        </div>
-    )
+import React from 'react'
+import { useParams } from 'react-router-dom'
+export default function User() {
+    const params=useParams();
+    const {name}=params;
+    console.log(name);
+  return (
+    <div>
+        <h1>Users {name} page</h1>
+        <p>Hello World</p>
+    </div>
+  );
 }
-
-export default User;
